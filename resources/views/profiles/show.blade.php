@@ -9,7 +9,7 @@
         </div>
         <div class="col-8">
             <div class="d-flex align-items-baseline">
-                <div class="h4 mr-3 pt-2">Futur pseudo</div>
+                <div class="h4 mr-3 pt-2">{{ $user->username }}</div>
                 <button class="btn btn-sm btn-dark">S'abonner</button>
             </div>
             <div class="d-flex mt-3">
