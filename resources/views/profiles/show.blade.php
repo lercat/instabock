@@ -18,9 +18,9 @@
                 <div class="mr-5"><strong>3</strong> abonnements</div>
             </div>
             <div class="mt-3">
-                <div class="font-weight-bold">Titre</div>
-                <div>Présentation</div>
-                <a href="#">Adresse du Site</a>
+                <div class="font-weight-bold">{{ $user->profile->titre }}</div>
+                <div>{{ $user->profile->presentation }}</div>
+                <a href="#">{{ $user->profile->url }}</a>
             </div>
         </div>
     </div>
