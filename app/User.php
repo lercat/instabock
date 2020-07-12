@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return 'username';
     }
+
+    public function profile()
+    {
+        return $this->hasOne('App\profile');
+    }
 }
