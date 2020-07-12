@@ -20,7 +20,7 @@
             <div class="mt-3">
                 <div class="font-weight-bold">{{ $user->profile->titre }}</div>
                 <div>{{ $user->profile->presentation }}</div>
-                <a href="#">{{ $user->profile->url }}</a>
+                <a href="{{ $user->profile->url }}">{{ $user->profile->url }}</a>
             </div>
         </div>
     </div>
