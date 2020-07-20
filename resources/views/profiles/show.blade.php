@@ -27,8 +27,8 @@
 <!-- fin présentation - nouvelle row pour les posts-->
     <div class="row pt-5">
         @foreach($user->posts as $post)
-        <div class="col-4">
-            <img src="{{ asset('storage') . '/' . $post->image }}" class="w-100 mb-3" alt="bière barbar">
+        <div class="col-4 pb-4">
+            <img src="{{ asset('storage') . '/' . $post->image }}" class="w-100" alt="bière barbar">
         </div>
         @endforeach
     </div>
