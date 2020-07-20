@@ -26,15 +26,11 @@
     </div>
 <!-- fin présentation - nouvelle row pour les posts-->
     <div class="row pt-5">
+        @foreach($user->posts as $post)
         <div class="col-4">
             <img src="../img/barbar.png" class="w-100" alt="bière barbar">
         </div>
-        <div class="col-4">
-            <img src="../img/bernardus.png" class="w-100" alt="bière bernardus">
-        </div>
-        <div class="col-4">
-            <img src="../img/erdinger.png" class="w-100" alt="bière erdinger">
-        </div>
+        @endforeach
     </div>
 </div>
 @endsection

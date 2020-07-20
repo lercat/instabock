@@ -15,4 +15,25 @@ class PostController extends Controller
     {
         return view('posts.create');
     }
+
+    public function store()
+    {
+        $data = request()->validate([
+            'legende' => ['required', 'string'],
+            'description' => ['required', 'string'],
+            'categorie' => ['string'],
+            'image' => ['required', 'image'],        
+             ]);
+
+            $imagePath = request('image')->store('uploads', 'public');
+
+            auth()->user()->posts()->create([
+                'legende' => $data['legende'],
+                'description' => $data['description'],
+                'categorie' => $data['categorie'],
+                'image' => $imagePath
+            ]);
+
+            return redirect()->route('profiles.show', ['user' => auth()->user()]);
+    }
 }

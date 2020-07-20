@@ -11,13 +11,13 @@
                     <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="legende" class="col-md-4 col-form-label">Légende du post</label>
+                        <div class="form-group">
+                            <label for="legende">Légende</label>
                                     
                             <input id="legende" 
                                 type="text" 
                                 class="form-control @error('legende') is-invalid @enderror" 
-                                name="legende"
+                                name="legende" value="{{ old('legende') }}"
                                 autocomplete="legende" autofocus>
                                 
                             @error('legende')
@@ -27,12 +27,12 @@
                             @enderror
                         </div>  
         
-                        <div class="row">
-                            <label for="description" class="col-md-4 col-form-label">Description du post</label>
+                        <div class="form-group">
+                            <label for="description">Description du post</label>
                             <input id="description" 
                                     type="text" 
                                     class="form-control @error('description') is-invalid @enderror" 
-                                    name="description"
+                                    name="description" value="{{ old('description') }}"
                                     autocomplete="description" autofocus>
                                     
                             @error('description')
@@ -42,9 +42,9 @@
                             @enderror
                         </div>
         
-                        <div class="row">
-                            <label for="categorie" class="col-md-4 col-form-label">Couleur de la bière</label>
-                            <select name="categorie" id="categorie" class="custom-select">
+                        <div class="form-group">
+                            <label for="categorie">Couleur de la bière</label>
+                            <select name="categorie" id="categorie" class="custom-select @error('categorie') is-invalid @enderror" >
                                 <option value="0">Indéterminée</option>
                                 <option value="1">Blanche</option>
                                 <option value="2">Blonde</option>
@@ -58,12 +58,12 @@
                             @enderror
                         </div>
 
-                        <div class="row">
-                            <label for="image" class="col-md-4 col-form-label">Image du post</label>
+                        <div class="form-group">
+                            <label for="image">Image</label>
                             <input id="image"
                                     type="file" 
                                     class="form-control-file @error('image') is-invalid @enderror"  
-                                    name="image"
+                                    name="image" value="{{ old('image') }}"
                                     autocomplete="image" autofocus>
                             @error('image')
                                     <span class="invalid-feedback" role="alert">
@@ -72,11 +72,10 @@
                             @enderror
                         </div>
         
-                        <div class="row pt-4">
-                            <button class="btn btn-dark">Créer le post
+                        <div class="form-group pt-3">
+                            <button class="btn btn-dark">Créer mon post
                             </button>
-                        </div>
-        
+                        </div>     
                     </form>
                 </div>
             </div>
