@@ -13,7 +13,7 @@
                 <button class="btn btn-sm btn-dark">S'abonner</button>
             </div>
             <div class="d-flex mt-3">
-                <div class="mr-5"><strong>25</strong> publications</div>
+                <div class="mr-5"><strong>{{ $user->posts->count() }}</strong> publication(s)</div>
                 <div class="mr-5"><strong>346</strong> abonnés</div>
                 <div class="mr-5"><strong>3</strong> abonnements</div>
             </div>
@@ -28,7 +28,7 @@
     <div class="row pt-5">
         @foreach($user->posts as $post)
         <div class="col-4">
-            <img src="../img/barbar.png" class="w-100" alt="bière barbar">
+            <img src="{{ asset('storage') . '/' . $post->image }}" class="w-100 mb-3" alt="bière barbar">
         </div>
         @endforeach
     </div>
