@@ -23,7 +23,7 @@ class PostController extends Controller
         $data = request()->validate([
             'legende' => ['required', 'string'],
             'description' => ['required', 'string'],
-            'categorie' => ['string'],
+            'categorie' => ['required','string'],
             'image' => ['required', 'image'],        
              ]);
 
