@@ -62,7 +62,7 @@
 
 
                         <div class="form-group">
-                            <label for="image">Image</label>
+                            <label for="image">Image du profil</label>
                             <input id="image"
                                     type="file" 
                                     class="form-control-file @error('image') is-invalid @enderror"  
@@ -74,6 +74,7 @@
                                     </span>
                             @enderror
                         </div>
+
         
                         <div class="form-group pt-3">
                             <button class="btn btn-dark">Valider les modifications

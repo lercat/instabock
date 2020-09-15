@@ -5,7 +5,7 @@
 <!-- ici on est sur la partie présentation-->
     <div class="row mt-4">
         <div class="col-4 text-center">
-            <img src="../img/profil1.png" class="rounded-circle w-50" alt="">
+            <img src="{{ $user->profile->getImage() }}" class="rounded-circle w-100" style="max-width: 230px">
         </div>
         <div class="col-8">
             <div class="d-flex align-items-baseline">
@@ -17,7 +17,9 @@
                 <div class="mr-5"><strong>346</strong> abonnés</div>
                 <div class="mr-5"><strong>3</strong> abonnements</div>
             </div>
+            @can('update', $user->profile)
             <a href="{{ route('profiles.edit', ['username' => $user->username]) }}" class="btn btn-outline-secondary mt-3" >Modifier mes informations</a>
+            @endcan
             <div class="mt-3">
                 <div class="font-weight-bold">{{ $user->profile->titre }}</div>
                 <div>{{ $user->profile->presentation }}</div>

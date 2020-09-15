@@ -53,7 +53,7 @@ class ProfilePolicy
      */
     public function update(User $user, Profile $profile)
     {
-        //
+        return $user->username == $profile->user->username;
     }
 
     /**
