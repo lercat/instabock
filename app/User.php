@@ -58,6 +58,11 @@ class User extends Authenticatable
         return $this->hasOne('App\profile');
     }
 
+    public function following() 
+    {
+        return $this->belongsToMany('App\Profile');
+    }
+
     public function posts()
     {
         return $this->hasMany('App\Post')->orderBy('created_at', 'DESC');
