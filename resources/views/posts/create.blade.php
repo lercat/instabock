@@ -45,13 +45,13 @@
                         <div class="form-group">
                             <label for="categorie">Couleur de la bière</label>
                             <select name="categorie" id="categorie" class="custom-select @error('categorie') is-invalid @enderror" >
-                                <option value="0">Indéterminée</option>
-                                <option value="1">Blanche</option>
-                                <option value="2">Blonde</option>
-                                <option value="3">Brune</option>
-                                <option value="4">Ambrée</option>
-                                <option value="5">Rosée</option>
-                                <option value="6">Noire</option>
+                                <option value="Indéterminée">Indéterminée</option>
+                                <option value="Blanche">Blanche</option>
+                                <option value="Blonde">Blonde</option>
+                                <option value="Brune">Brune</option>
+                                <option value="Ambrée">Ambrée</option>
+                                <option value="Rosée">Rosée</option>
+                                <option value="Noire">Noire</option>
                             </select>
                             @error('categorie')
                                 {{ $errors->first('categorie') }}
